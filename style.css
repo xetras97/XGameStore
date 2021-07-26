@@ -110,6 +110,7 @@ header img {
 .carrusel {
     width: 35%;
     margin: 20px auto;
+    margin-bottom: 0px;
     height: 250px;
     display: flex;
     overflow: hidden;
@@ -162,6 +163,24 @@ header img {
 .carrusel__item4 {
     background-image: url(./pics/Juegos/GTA5.jpg);
 }
+
+.icon-container {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.carrusel__icon {
+    width: 10px;
+    height: 10px;
+    margin: 5px 3px;
+    background-image: url(./pics/circle_black_24dp.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
 
 /* Estilos del pie de pagina */
 footer {
