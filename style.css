@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Estilos Encabezado */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8A8C8E;
+}
+
+li, a {
+    text-decoration: none;
+    list-style: none;
+}
+
+header img {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.nav {
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav__lista {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.nav__lista li {
+    margin: 20px 40px;
+    font-size: 2.2rem;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase; 
+}
+
+.nav__lista li:first-child {
+    border-bottom: solid;
+    border-color: #D63230; 
+}
+
+.nav__lista li:hover {
+    border-bottom: solid;
+    border-color: #D63230;
+}
+
+.nav__lista li a {
+    color: #34312D;
+}
+
+.perfil {
+    display: block;
+}
+
+.perfil__imagen {
+    margin-right: 15px;
+}
+
+.perfil__lista-desplegable {
+    display: none;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    background-color: #8A8C8E;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+}
+
+.perfil:hover .perfil__lista-desplegable {
+    display: block;
+}
+
+.perfil__lista-desplegable li:hover  a{
+    text-decoration: underline #D63230;
+}
+
+.perfil__lista-desplegable li a{
+    color: #34312D;
+}
+
+/* Estilos del pie de pagina */
+footer {
+    width: 100%;
+    display: inline-flex;
+    position: absolute;
+    background-color: #8A8C8E;
+    bottom: 0;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    color: #34312D;
+}
+
+footer div {
+    margin: 5px;
+}
+
+.nosotros a {
+    color: #34312D;
+}
+
+.nosotros:hover a {
+    text-decoration: underline #D63230;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.redes-sociales i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.redes-sociales i:hover {
+    color: #D63230;
+}
