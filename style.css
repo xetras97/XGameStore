@@ -9,6 +9,16 @@ html {
     font-family: 'Do Hyeon', sans-serif;
 }
 
+/* Variables */
+:root {
+    --color-principal-oscuro: #616161;
+    --color-principal-claro: #F5F5F5;
+    --color-principal: #9E9E9E;
+    --color-texto: #212121;
+    --color-texto-enfasis: #FF5252;
+    --color-texto-secundario: #757575;
+    --color-division: #BDBDBD;
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -20,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #8A8C8E;
+    background-color: var(--color-principal);
 }
 
 li, a {
@@ -54,16 +64,16 @@ header img {
 
 .nav__lista li:first-child {
     border-bottom: solid;
-    border-color: #D63230; 
+    border-color: var(--color-texto-enfasis); 
 }
 
 .nav__lista li:hover {
     border-bottom: solid;
-    border-color: #D63230;
+    border-color: var(--color-texto-enfasis);
 }
 
 .nav__lista li a {
-    color: #34312D;
+    color: var(--color-texto);
 }
 
 .perfil {
@@ -79,7 +89,7 @@ header img {
     position: absolute;
     right: 0;
     text-align: right;
-    background-color: #8A8C8E;
+    background-color: var(--color-principal);
     font-size: 1.3rem;
     padding: 10px 20px;
 }
@@ -89,11 +99,11 @@ header img {
 }
 
 .perfil__lista-desplegable li:hover  a{
-    text-decoration: underline #D63230;
+    text-decoration: underline var(--color-texto-enfasis);
 }
 
 .perfil__lista-desplegable li a{
-    color: #34312D;
+    color: var(--color-texto);
 }
 
 /* Estilos del pie de pagina */
@@ -101,11 +111,11 @@ footer {
     width: 100%;
     display: inline-flex;
     position: absolute;
-    background-color: #8A8C8E;
+    background-color: var(--color-principal);
     bottom: 0;
     justify-content: space-between;
     font-size: 1.6rem;
-    color: #34312D;
+    color: var(--color-texto);
 }
 
 footer div {
@@ -113,11 +123,11 @@ footer div {
 }
 
 .nosotros a {
-    color: #34312D;
+    color: var(--color-texto);
 }
 
 .nosotros:hover a {
-    text-decoration: underline #D63230;
+    text-decoration: underline var(--color-texto-enfasis);
 }
 
 .redes-sociales {
@@ -133,5 +143,5 @@ footer div {
 }
 
 .redes-sociales i:hover {
-    color: #D63230;
+    color: var(--color-texto-enfasis);
 }
