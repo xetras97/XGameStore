@@ -23,6 +23,27 @@ body {
     width: 100vw;
     height: 100vh;
 }
+/* Definicion de las animaciones */
+@keyframes slidy {
+     0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -300%; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* Estilos Encabezado */
 header {
@@ -99,15 +120,6 @@ header img {
     animation: fadeInDown 0.5s both;
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 .perfil__lista-desplegable li:hover  a{
     text-decoration: underline var(--color-texto-enfasis);
 }
@@ -116,11 +128,21 @@ header img {
     color: var(--color-texto);
 }
 
-/* Estilos Carrusel */
+/* Estilos Seccion 1 */
+
+.section-one {
+    display: grid;
+    grid-template-columns: 1fr 40% 1fr;
+    grid-template-rows: 50px 250px 100px 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+    /* Estilos Carrusel */
 .carrusel {
-    width: 40%;
-    margin: 20px auto;
-    margin-bottom: 0px;
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 2/3;
     height: 250px;
     display: flex;
     overflow: hidden;
@@ -128,7 +150,7 @@ header img {
     border-radius: 5px;
     position: relative;
 }
-    /* Contenedor para animacion de carrusel */
+        /* Contenedor para animacion de carrusel */
 .carrusel__container {
     width: 100%;
     height: 250px;
@@ -136,18 +158,6 @@ header img {
     animation: 30s slidy infinite;
     position: relative;
     display: flex;
-}
-    /* Definicion de la animacion */
-@keyframes slidy {
-    0% { left: 0%; }
-    20% { left: 0%; }
-    25% { left: -100%; }
-    45% { left: -100%; }
-    50% { left: -200%; }
-    70% { left: -200%; }
-    75% { left: -300%; }
-    95% { left: -300%; }
-    100% { left: -300%; }
 }
 
 .playpause {
@@ -189,9 +199,12 @@ header img {
     background-image: url(./pics/Juegos/GTA5.jpg);
 }
 
+    /* Contenedor de iconos */
 .icon-container {
-    width: 100vw;
+    width: 100%;
     height: 100px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
     display: flex;
     justify-content: center;
 }
@@ -206,6 +219,21 @@ header img {
     cursor: pointer;
 }
 
+    /* Barra de busqueda */
+.section-one__barra-busqueda {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+.popular-container{
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+}
+
+.releases-container{
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+}
 /* Estilos del pie de pagina */
 footer {
     width: 100%;
