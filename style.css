@@ -96,6 +96,16 @@ header img {
 
 .perfil:hover .perfil__lista-desplegable {
     display: block;
+    animation: fadeInDown 0.5s both;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .perfil__lista-desplegable li:hover  a{
@@ -108,7 +118,7 @@ header img {
 
 /* Estilos Carrusel */
 .carrusel {
-    width: 35%;
+    width: 40%;
     margin: 20px auto;
     margin-bottom: 0px;
     height: 250px;
