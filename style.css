@@ -116,6 +116,7 @@ header img {
     overflow: hidden;
     box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.75);
     border-radius: 5px;
+    position: relative;
 }
     /* Contenedor para animacion de carrusel */
 .carrusel__container {
@@ -137,6 +138,20 @@ header img {
     75% { left: -300%; }
     95% { left: -300%; }
     100% { left: -300%; }
+}
+
+.playpause {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    bottom: 0;
+    right: 0;
+    background-image: url(./pics/pause_circle_white_24dp_d2.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
 }
 
 .carrusel .carrusel__item1, .carrusel__item2, .carrusel__item3, .carrusel__item4 {
