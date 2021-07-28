@@ -134,7 +134,7 @@ header img {
 .section-one {
     display: grid;
     grid-template-columns: 1fr 40% 1fr;
-    grid-template-rows: 50px 250px 25px 1fr;
+    grid-template-rows: 50px 25px 250px 25px 100px 10px;
     align-items: center;
     justify-items: center;
     background-color: var(--color-principal-oscuro);
@@ -144,7 +144,7 @@ header img {
 .carrusel {
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 2/3;
+    grid-row: 3 / 4;
     height: 250px;
     display: flex;
     overflow: hidden;
@@ -206,7 +206,7 @@ header img {
     width: 100%;
     height: 25px;
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,15 +252,101 @@ header img {
     text-align: center;
 }
 
-.popular-container{
-    grid-column: 1 / 2;
-    grid-row: 2 / 5;
-    font-size: 2.5rem;
-}
-
-.releases-container{
+.releases-container {
     grid-column: 3 / 4;
     grid-row: 2 / 5;
+}
+
+    /* Juegos Populares */
+.popular-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 6;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-principal);
+    border-radius: 25px;
+}
+
+.popular-container h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+.game-rating-container {
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 1fr 1fr 1fr 10px;
+}
+
+.game-image {
+    width: 80%;
+    justify-self: center;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+.game1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    background-image: url(./pics/Juegos/crash-bandicoot.jpg);
+    box-shadow: -7px 6px 5px -1px rgba(62,62,62,0.75);
+}
+.game2 {
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;
+    background-image: url(./pics/Juegos/minecraft.jpg);
+    box-shadow: 7px 6px 5px -1px rgba(62,62,62,0.75);
+}
+.game3 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    background-image: url(./pics/Juegos/cod-warzone.jpg);
+    box-shadow: -7px 6px 5px -1px rgba(62,62,62,0.75);
+}
+
+.card--crash {
+    grid-column: 3 / 6;
+    grid-row: 1 / 2;
+}
+.card--minecraft {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    text-align: right;
+}
+.card--warzone {
+    grid-column: 3 / 6;
+    grid-row: 3 / 4;
+}
+
+.rating-card {
+    align-self: center;
+}
+.rating-card a {
+    font-size: 1.6rem;
+    color: var(--color-texto);
+    text-decoration: none;
+}
+.star{
+    color: gold;
+}
+.half-star--rotate {
+    transform: scaleX(-1);
+}
+.xgame {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: inline-block;
+}
+.xgame img {
+    width: 2.2rem;
+    height: 2.2rem;
 }
 /* Estilos del pie de pagina */
 footer {
