@@ -18,6 +18,7 @@ html {
     --color-texto-enfasis: #FF5252;
     --color-texto-secundario: #757575;
     --color-division: #BDBDBD;
+    --fuente: 'Do Hyeon', sans-serif;
 }
 body {
     width: 100vw;
@@ -133,9 +134,10 @@ header img {
 .section-one {
     display: grid;
     grid-template-columns: 1fr 40% 1fr;
-    grid-template-rows: 50px 250px 100px 1fr;
+    grid-template-rows: 50px 250px 25px 1fr;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+    background-color: var(--color-principal-oscuro);
 }
 
     /* Estilos Carrusel */
@@ -202,11 +204,12 @@ header img {
     /* Contenedor de iconos */
 .icon-container {
     width: 100%;
-    height: 100px;
+    height: 25px;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .carrusel__icon {
     width: 10px;
@@ -220,14 +223,39 @@ header img {
 }
 
     /* Barra de busqueda */
-.section-one__barra-busqueda {
+.search-container {
+    width: 50%;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    background-color: var(--color-division);
+    border: 2px solid var(--color-texto-enfasis);
+    border-radius: 10px;
+    opacity: 0.5;
+    box-shadow: 0px 1px 8px 4px rgba(62,62,62,0.75);
+}
+.section-one__barra-busqueda {
+    width: 90%;
+    padding: 2px;
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: var(--fuente);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .popular-container{
     grid-column: 1 / 2;
     grid-row: 2 / 5;
+    font-size: 2.5rem;
 }
 
 .releases-container{

@@ -13,6 +13,11 @@ botonCarruselCuatro.addEventListener("click", moverCarruselCuatro);
 
 botonPlayPause.addEventListener("click", playPauseCarrusel);
 
+document.getElementById("search-container").addEventListener("click", cambiarOpacidad);
+
+function cambiarOpacidad(){
+    document.getElementById("search-container").style.opacity = "1";
+}
 
 function moverCarruselUno(){
     carruselContainer.style.animation = "none";
