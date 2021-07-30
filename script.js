@@ -109,3 +109,32 @@ function cambioBotonProximamente () {
         document.getElementById("coming-soon-container").style.display = "grid";
     }
 }
+
+
+let lanzamientos = [
+    {
+        "nombre" : "Chernobylite",
+        "src" : "./pics/Juegos/chernobylite-1.jpg",
+        "precio" : "US$ 5.36",
+    },
+    {
+        "nombre" : "Hola",
+        "src" : "./pics/Juegos/chernobylite-1.jpg",
+        "precio" : "545121",
+    },
+]
+
+function renderizarLanzamientos() {
+    let html = "";
+
+    lanzamientos.forEach(juego => {
+        html +=
+        `<div class="new-games__game-target">
+            <figure><img src="`+ juego.src +`" alt="`+juego.nombre+`"></figure>
+            <h3>`+juego.nombre+`</h3>
+            <p>`+juego.precio+`</p>
+        </div>`
+    });
+    document.getElementById("new-games-container").innerHTML = html;
+}
+renderizarLanzamientos();
