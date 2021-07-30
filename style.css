@@ -388,7 +388,7 @@ header img {
 }
 .new-games-container {
     width: 100%;
-    height: 100%;
+    height: 88%;
     border: 2px solid var(--color-texto-enfasis);
     border-radius: 0 0 25px 25px;
     display: grid;
@@ -396,13 +396,15 @@ header img {
     grid-template-rows: 1fr 1fr 1fr; 
     justify-items: center;
     align-items: center;  
+    animation: fadeInDown 1s both;
 }
 .new-games__game-target {
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
     background-color: #FF4D4D;
     border-radius: 25px;
     text-align: center;
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75);
 }
 .new-games__game-target figure {
     height: 65%;
@@ -413,7 +415,7 @@ header img {
     border-radius: 25px 25px 0 0;
 }
 .new-games__game-target h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 .new-games__game-target p {
     font-size: 1.2rem;
@@ -425,8 +427,36 @@ header img {
     position: absolute;
     bottom: 0;
     display: none;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    align-items: center;
     border: 2px solid var(--color-texto-enfasis);
     border-radius: 0 0 25px 25px;
+    animation: fadeInDown 1s both;
+}
+.coming-soon__game-target {
+    width: 85%;
+    height: 85%;
+    background-color: #FF4D4D;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75);
+}
+.coming-soon-container figure {
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+}
+.coming-soon-container figure img {
+    max-width: 100%;
+    border-radius: 25px 25px 0 0;
+}
+.coming-soon__game-target h3 {
+    font-size: 1.4rem;
+}
+.coming-soon__game-target p {
+    font-size: 1.2rem;
 }
 /* Estilos del pie de pagina */
 footer {

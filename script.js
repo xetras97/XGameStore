@@ -14,6 +14,63 @@ var bProxActivado = 0;
 document.getElementById("boton-lanzamientos").addEventListener("click", cambioBotonLanzamientos);
 document.getElementById("boton-proximamente").addEventListener("click", cambioBotonProximamente);
 
+let juegosLanzamientos = [
+    {
+        "nombre" : "Chernobylite",
+        "src" : "./pics/Juegos/chernobylite-1.jpg",
+        "precio" : "US$ 5.36",
+    },
+    {
+        "nombre" : "Fuga: Melodies of Steel",
+        "src" : "./pics/Juegos/fuga.jpg",
+        "precio" : "US$ 8.49",
+    },
+    {
+        "nombre" : "The Ascent",
+        "src" : "./pics/Juegos/The-ascent.jpg",
+        "precio" : "US$ 10.56",
+    },
+    {
+        "nombre" : "Starbase",
+        "src" : "./pics/Juegos/starbase.jpg",
+        "precio" : "US$ 3.46",
+    },
+    {
+        "nombre" : "Tribes of Midgard",
+        "src" : "./pics/Juegos/tribes-of-midgard.jpg",
+        "precio" : "US$ 2.10",
+    },
+    {
+        "nombre" : "The Forgotten City",
+        "src" : "./pics/Juegos/forgotten-city.jpg",
+        "precio" : "US$ 8.09",
+    },
+]
+
+let juegosProximamente = [
+    {
+        "nombre": "Battlefield 2042",
+        "src": "./pics/Juegos/battlefield-2042.jpg",
+        "fecha": calcularFecha(51),
+    },
+    {
+        "nombre": "Grime",
+        "src": "./pics/Juegos/grime.jpg",
+        "fecha": calcularFecha(60),
+    },
+    {
+        "nombre": "T. War: Warhammer III",
+        "src": "./pics/Juegos/total-war-warhammer-iii.jpg",
+        "fecha": calcularFecha(180),
+    },
+    {
+        "nombre": "Party Animals",
+        "src": "./pics/Juegos/party-animals-cover.jpg",
+        "fecha": calcularFecha(35),
+    },
+]
+
+
     // LISTENERS PARA CARRUSEL
 botonCarruselUno.addEventListener("click", moverCarruselUno);
 botonCarruselDos.addEventListener("click", moverCarruselDos);
@@ -110,24 +167,14 @@ function cambioBotonProximamente () {
     }
 }
 
-
-let lanzamientos = [
-    {
-        "nombre" : "Chernobylite",
-        "src" : "./pics/Juegos/chernobylite-1.jpg",
-        "precio" : "US$ 5.36",
-    },
-    {
-        "nombre" : "Hola",
-        "src" : "./pics/Juegos/chernobylite-1.jpg",
-        "precio" : "545121",
-    },
-]
+function calcularFecha(dias) {
+    let fecha = new Date(Date.now() + (dias * 86400000));
+    return fecha.toLocaleDateString();
+}
 
 function renderizarLanzamientos() {
     let html = "";
-
-    lanzamientos.forEach(juego => {
+    juegosLanzamientos.forEach(juego => {
         html +=
         `<div class="new-games__game-target">
             <figure><img src="`+ juego.src +`" alt="`+juego.nombre+`"></figure>
@@ -137,4 +184,20 @@ function renderizarLanzamientos() {
     });
     document.getElementById("new-games-container").innerHTML = html;
 }
+
+function renderizarProximamente() {
+    let html = "";
+    
+    juegosProximamente.forEach(juego => {
+        html +=
+        `<div class="new-games__game-target">
+        <figure><img src="`+ juego.src +`" alt="`+juego.nombre+`"></figure>
+        <h3>`+juego.nombre+`</h3>
+        <p>`+juego.fecha+`</p>
+        </div>`
+    });
+    document.getElementById("coming-soon-container").innerHTML = html;
+};
+
 renderizarLanzamientos();
+renderizarProximamente();
