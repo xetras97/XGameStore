@@ -114,6 +114,7 @@ header img {
     background-color: var(--color-principal);
     font-size: 1.3rem;
     padding: 10px 20px;
+    z-index: 1;
 }
 
 .perfil:hover .perfil__lista-desplegable {
