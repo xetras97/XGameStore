@@ -188,7 +188,7 @@ header img {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 40% 1fr;
-    grid-template-rows: 25px 250px 25px 100px 10px 500px;
+    grid-template-rows: 25px 250px 25px 160px 10px;
     align-items: center;
     justify-items: center;
     background-color: var(--color-principal-oscuro);
@@ -488,12 +488,12 @@ footer {
     width: 100%;
     display: inline-flex;
     position: sticky;
-    background-color: var(--color-principal);
+    background-color: var(--color-texto);
     bottom: 0;
     justify-content: space-between;
     align-items: center;
     font-size: 1.6rem;
-    color: var(--color-texto);
+    color: var(--color-texto-enfasis);
 }
 
 footer div {
@@ -501,7 +501,7 @@ footer div {
 }
 
 .nosotros a {
-    color: var(--color-texto);
+    color: var(--color-texto-enfasis);
 }
 
 .nosotros:hover a {
@@ -514,6 +514,7 @@ footer div {
     align-items: center;
     text-align: center;
     font-size: 1.8rem;
+    color: var(--color-principal);
 }
 
 .redes-sociales i {
