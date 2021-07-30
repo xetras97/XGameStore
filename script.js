@@ -1,5 +1,5 @@
 // VARAIABLES SECTION 1
-    // VARAIBLES PARA CARRUSEL
+// VARAIBLES PARA CARRUSEL
 var botonCarruselUno = document.getElementById("boton__carrusel-uno");
 var botonCarruselDos = document.getElementById("boton__carrusel-dos");
 var botonCarruselTres = document.getElementById("boton__carrusel-tres");
@@ -8,7 +8,7 @@ var carruselContainer = document.getElementById("carrusel");
 var botonPlayPause = document.getElementById("boton__carrusel-playpause");
 var play = 1;
 
-    // VARIABLES Y LISTENERS PARA ARTICLE
+// VARIABLES Y LISTENERS PARA ARTICLE
 var bLanActivado = 1;
 var bProxActivado = 0;
 document.getElementById("boton-lanzamientos").addEventListener("click", cambioBotonLanzamientos);
@@ -71,22 +71,34 @@ let juegosProximamente = [
 ]
 
 
-    // LISTENERS PARA CARRUSEL
+// LISTENERS PARA CARRUSEL
 botonCarruselUno.addEventListener("click", moverCarruselUno);
 botonCarruselDos.addEventListener("click", moverCarruselDos);
 botonCarruselTres.addEventListener("click", moverCarruselTres);
 botonCarruselCuatro.addEventListener("click", moverCarruselCuatro);
 botonPlayPause.addEventListener("click", playPauseCarrusel);
-    
-    // LISTENER PARA BARRA DE BUSQUEDA 
+
+// LISTENER PARA BARRA DE BUSQUEDA 
 document.getElementById("search-container").addEventListener("click", cambiarOpacidad);
+window.addEventListener("scroll", cambiarOpacidadBusqueda);
 
 // FUNCIONES SECTION 1
-    // FUNCION BARRA DE BUSQUEDA
+// FUNCION BARRA DE BUSQUEDA
 function cambiarOpacidad(){
     document.getElementById("search-container").style.opacity = "1";
 }
 
+let opacidadBusqueda = 0;
+    function cambiarOpacidadBusqueda () {
+        if (window.scrollY >= 1 && opacidadBusqueda == 0) {
+            document.getElementById("search-section").style.opacity = "0.7";
+            opacidadBusqueda = 1;
+        } else if (opacidadBusqueda == 1 && window.scrollY == 0) {
+            document.getElementById("search-section").style.opacity = "1";
+            opacidadBusqueda = 0;
+        }
+    }
+    
     // FUNCIONES CARRUSEL
 function moverCarruselUno(){
     carruselContainer.style.animation = "none";
@@ -201,3 +213,4 @@ function renderizarProximamente() {
 
 renderizarLanzamientos();
 renderizarProximamente();
+

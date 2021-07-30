@@ -20,9 +20,13 @@ html {
     --color-division: #BDBDBD;
     --fuente: 'Do Hyeon', sans-serif;
 }
+
 body {
-    width: 100vw;
+    max-width: 100vw;
     height: 100vh;
+}
+main {
+    width: 100%;
 }
 /* Definicion de las animaciones */
 @keyframes slidy {
@@ -46,13 +50,25 @@ body {
     }
 }
 
+@keyframes smoothOpacity {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Estilos Encabezado */
 header {
     width: 100%;
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-principal);
+    z-index: 99;
 }
 
 li, a {
@@ -114,7 +130,7 @@ header img {
     background-color: var(--color-principal);
     font-size: 1.3rem;
     padding: 10px 20px;
-    z-index: 1;
+    z-index: 99;
 }
 
 .perfil:hover .perfil__lista-desplegable {
@@ -130,12 +146,49 @@ header img {
     color: var(--color-texto);
 }
 
-/* Estilos Seccion 1 */
+/* Barra de busqueda */
+.search-section {
+    width: 100%;
+    position: sticky;
+    top: 70px;
+    padding: 10px 0;
+    background-color: var(--color-principal-oscuro);
+    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+.search-container {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    background-color: var(--color-division);
+    border: 2px solid var(--color-texto-enfasis);
+    border-radius: 10px;
+    opacity: 0.5;
+    box-shadow: 0px 1px 8px 4px rgba(62,62,62,0.75);
+}
+.section-one__barra-busqueda {
+    width: 90%;
+    padding: 2px;
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: var(--fuente);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+}
 
+/* Estilos Seccion 1 */
 .section-one {
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 40% 1fr;
-    grid-template-rows: 50px 25px 250px 25px 100px 10px;
+    grid-template-rows: 25px 250px 25px 100px 10px 500px;
     align-items: center;
     justify-items: center;
     background-color: var(--color-principal-oscuro);
@@ -145,7 +198,7 @@ header img {
 .carrusel {
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
     height: 250px;
     display: flex;
     overflow: hidden;
@@ -207,7 +260,7 @@ header img {
     width: 100%;
     height: 25px;
     grid-column: 2 / 3;
-    grid-row: 4 / 5;
+    grid-row: 3 / 4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,40 +276,11 @@ header img {
     cursor: pointer;
 }
 
-    /* Barra de busqueda */
-.search-container {
-    width: 50%;
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-    align-self: center;
-    justify-self: center;
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    background-color: var(--color-division);
-    border: 2px solid var(--color-texto-enfasis);
-    border-radius: 10px;
-    opacity: 0.5;
-    box-shadow: 0px 1px 8px 4px rgba(62,62,62,0.75);
-}
-.section-one__barra-busqueda {
-    width: 90%;
-    padding: 2px;
-    grid-column: 2 / 3;
-    align-self: center;
-    justify-self: center;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-family: var(--fuente);
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    text-align: center;
-}
 
     /* Juegos Populares */
 .popular-container {
     grid-column: 1 / 2;
-    grid-row: 2 / 6;
+    grid-row: 1 / 5;
     width: 80%;
     height: 100%;
     flex-direction: column;
@@ -348,7 +372,7 @@ header img {
     /* LANZAMIENTOS */
 .releases-container {
     grid-column: 3 / 4;
-    grid-row: 2 / 6;
+    grid-row: 1 / 5;
     width: 80%;
     height: 100%;
     display: flex;
@@ -463,10 +487,11 @@ header img {
 footer {
     width: 100%;
     display: inline-flex;
-    position: absolute;
+    position: sticky;
     background-color: var(--color-principal);
     bottom: 0;
     justify-content: space-between;
+    align-items: center;
     font-size: 1.6rem;
     color: var(--color-texto);
 }
@@ -487,6 +512,7 @@ footer div {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
     font-size: 1.8rem;
 }
 
