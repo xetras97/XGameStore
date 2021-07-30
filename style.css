@@ -252,20 +252,15 @@ header img {
     text-align: center;
 }
 
-.releases-container {
-    grid-column: 3 / 4;
-    grid-row: 2 / 5;
-}
-
     /* Juegos Populares */
 .popular-container {
     grid-column: 1 / 2;
     grid-row: 2 / 6;
     width: 80%;
     height: 100%;
-    display: flex;
     flex-direction: column;
     align-items: center;
+    display: flex;
     background-color: var(--color-principal);
     border-radius: 25px;
 }
@@ -347,6 +342,91 @@ header img {
 .xgame img {
     width: 2.2rem;
     height: 2.2rem;
+}
+
+    /* LANZAMIENTOS */
+.releases-container {
+    grid-column: 3 / 4;
+    grid-row: 2 / 6;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--color-principal);
+    border-radius: 25px;
+}
+.realeses__button-container {
+    width: 100%;
+    height: 12%;
+    display: flex;
+}
+.releases__button {
+    width: 50%;
+    height: 100%;
+    font-family: var(--fuente);
+    font-size: 1.6rem;
+    word-wrap: normal;
+    background-color: var(--color-division);
+    cursor: pointer;
+}
+.button-new {
+    border-radius: 25px 25px 0 0;
+    border-top: 2px solid var(--color-texto-enfasis);
+    border-right: 2px solid var(--color-texto-enfasis);
+    border-left: 2px solid var(--color-texto-enfasis);
+    border-bottom: none;
+}
+
+.button-soon {
+    border-radius: 25px 25px 0 0;
+    opacity: 0.5;
+    border-top: 2px solid var(--color-texto-secundario);
+    border-right: 2px solid var(--color-texto-secundario);
+    border-left: 2px solid var(--color-texto-secundario);
+    border-bottom: none;
+}
+.new-games-container {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-texto-enfasis);
+    border-radius: 0 0 25px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    justify-items: center;
+    align-items: center;  
+}
+.new-games__game-target {
+    width: 90%;
+    height: 90%;
+    background-color: #FF4D4D;
+    border-radius: 25px;
+    text-align: center;
+}
+.new-games__game-target figure {
+    height: 65%;
+    overflow: hidden;
+}
+.new-games__game-target figure img {
+    max-width: 100%;
+    border-radius: 25px 25px 0 0;
+}
+.new-games__game-target h3 {
+    font-size: 1.6rem;
+}
+.new-games__game-target p {
+    font-size: 1.2rem;
+}
+
+.coming-soon-container {
+    width: 100%;
+    height: 88%;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    border: 2px solid var(--color-texto-enfasis);
+    border-radius: 0 0 25px 25px;
 }
 /* Estilos del pie de pagina */
 footer {
