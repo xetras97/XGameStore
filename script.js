@@ -17,32 +17,32 @@ document.getElementById("boton-proximamente").addEventListener("click", cambioBo
 let juegosLanzamientos = [
     {
         "nombre" : "Chernobylite",
-        "src" : "./pics/Juegos/chernobylite-1.jpg",
+        "src" : "https://i.ibb.co/TbqLvMd/chernobylite-1.jpg",
         "precio" : "US$ 5.36",
     },
     {
         "nombre" : "Fuga: Melodies of Steel",
-        "src" : "./pics/Juegos/fuga.jpg",
+        "src" : "https://i.ibb.co/5rMyWc3/fuga.jpg",
         "precio" : "US$ 8.49",
     },
     {
         "nombre" : "The Ascent",
-        "src" : "./pics/Juegos/The-ascent.jpg",
+        "src" : "https://i.ibb.co/Q9SW733/The-ascent.jpg",
         "precio" : "US$ 10.56",
     },
     {
         "nombre" : "Starbase",
-        "src" : "./pics/Juegos/starbase.jpg",
+        "src" : "https://i.ibb.co/q58NqWx/starbase.jpg",
         "precio" : "US$ 3.46",
     },
     {
         "nombre" : "Tribes of Midgard",
-        "src" : "./pics/Juegos/tribes-of-midgard.jpg",
+        "src" : "https://i.ibb.co/YcnDkpc/tribes-of-midgard.jpg",
         "precio" : "US$ 2.10",
     },
     {
         "nombre" : "The Forgotten City",
-        "src" : "./pics/Juegos/forgotten-city.jpg",
+        "src" : "https://i.ibb.co/HVrXpPB/forgotten-city.jpg",
         "precio" : "US$ 8.09",
     },
 ]
@@ -50,22 +50,22 @@ let juegosLanzamientos = [
 let juegosProximamente = [
     {
         "nombre": "Battlefield 2042",
-        "src": "./pics/Juegos/battlefield-2042.jpg",
+        "src": "https://i.ibb.co/DzCX44J/battlefield-2042.jpg",
         "fecha": calcularFecha(51),
     },
     {
         "nombre": "Grime",
-        "src": "./pics/Juegos/grime.jpg",
+        "src": "https://i.ibb.co/w436z10/grime.jpg",
         "fecha": calcularFecha(60),
     },
     {
         "nombre": "T. War: Warhammer III",
-        "src": "./pics/Juegos/total-war-warhammer-iii.jpg",
+        "src": "https://i.ibb.co/W2wQt9t/total-war-warhammer-iii.jpg",
         "fecha": calcularFecha(180),
     },
     {
         "nombre": "Party Animals",
-        "src": "./pics/Juegos/party-animals-cover.jpg",
+        "src": "https://i.ibb.co/QnCFBS9/party-animals-cover.jpg",
         "fecha": calcularFecha(35),
     },
 ]
